@@ -1,0 +1,16 @@
+class Solution{
+        ArrayList<Integer> al = new ArrayList<>();
+    public List<Integer> pattern(int N){
+        // code here
+        
+        if(N<=0){
+            al.add(N);
+            return al;
+        }
+        
+        al.add(N);
+        pattern(N-5);
+        al.add(N);
+        return al;
+    }
+}
