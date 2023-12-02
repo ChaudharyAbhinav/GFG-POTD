@@ -1,0 +1,22 @@
+class Solution
+{
+    
+       public static boolean helper(Node node,int Min,int Max){
+            if(node==null){
+                return false;
+            }
+            
+            if(node.data == Min && node.data==Max){
+                return true;
+            }
+            
+            return helper(node.left,Min,node.data-1) | helper(node.right,node.data+1,Max);
+        }
+    public static boolean isDeadEnd(Node root)
+    {
+        //Add your code here.
+        return helper(root,1,100001);
+     
+       
+    }
+}
