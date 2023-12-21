@@ -1,0 +1,34 @@
+class Solution {
+    static int minCandy(int N, int ratings[]) {
+        // code here
+        int[] left=new int[N];
+        int[] right =new int[N];
+        
+        left[0]=1;
+        right[N-1]=1;
+        
+        //left to right
+        for(int i=1;i<N;i++){
+            if(ratings[i]>ratings[i-1]){
+                left[i]=left[i-1]+1;
+            }else{
+                left[i]=1;
+            }
+        }
+        
+        //right to left
+        for(int i=N-2;i>=0;i--){
+            if(ratings[i]>ratings[i+1]){
+                right[i]=right[i+1]+1;
+            }else right[i] = 1;
+        }
+        
+        //to find max
+        int totalcandy =0;
+        for(int i=0;i<N;i++){
+            totalcandy += Math.max(left[i],right[i]);
+        }
+        
+        
+        return totalcandy;
+    }
