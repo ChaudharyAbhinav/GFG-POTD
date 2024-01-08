@@ -100,8 +100,8 @@ class GfG
 ### Approach
 
 1. Merge two sorted list
-    a.both have ele
-    b.node1 is empty
-    c.node2 is empty
+    a.both have ele <br/>
+    b.node1 is empty <br/>
+    c.node2 is empty <br/>
    
 3. reverse merged list
