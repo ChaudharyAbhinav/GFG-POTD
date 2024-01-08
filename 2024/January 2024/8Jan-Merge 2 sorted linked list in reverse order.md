@@ -95,3 +95,13 @@ class GfG
 
 #### `TC` O(N+M)
 #### `SC` O(1)
+
+
+### Approach
+
+1. Merge two sorted list
+    a.both have ele
+    b.node1 is empty
+    c.node2 is empty
+   
+3. reverse merged list
